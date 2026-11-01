@@ -68,9 +68,7 @@ export const projectsData: Project[] = [
     gallery: [
       "/project/signal-report.png"
     ],
-    githubUrl: "https://github.com/Bilqis3008/sig
-
-      - report",
+    githubUrl: "https://github.com/Bilqis3008/signal-report",
     metrics: [
       { label: "Cakupan Instansi", value: "Diskominfo Kab. Muara Enim" },
       { label: "Fitur Utama", value: "Monitoring Titik Sinyal" }
