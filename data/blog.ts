@@ -67,9 +67,9 @@ Stay tuned for part 2 where we explore real-time WebSockets streaming with Edge 
     tags: ["Next.js 15", "React 19", "Performance", "TypeScript"],
     coverImage: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80",
     author: {
-      name: "Alex Rivera",
-      avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80",
-      role: "Senior Full Stack Engineer"
+      name: "Bilqis Nabila Ummami",
+      avatar: "https://ik.imagekit.io/denun/pp_porto.png?updatedAt=1784974983475",
+      role: "Data Analyst & Web Developer"
     }
   },
   {
@@ -94,9 +94,9 @@ User interfaces designed by Companies like Linear, Stripe, Vercel, and Raycast s
     tags: ["Tailwind CSS", "Design Systems", "UI/UX", "Glassmorphism"],
     coverImage: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=1200&q=80",
     author: {
-      name: "Alex Rivera",
-      avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80",
-      role: "Senior Full Stack Engineer"
+      name: "Bilqis Nabila Ummami",
+      avatar: "https://ik.imagekit.io/denun/pp_porto.png?updatedAt=1784974983475",
+      role: "Data Analyst & Web Developer"
     }
   },
   {
@@ -116,20 +116,20 @@ Instead of spawning unbounded goroutines per request, bound memory growth with p
 package main
 
 import (
-	"context"
-	"fmt"
-	"sync"
+  "context"
+  "fmt"
+  "sync"
 )
 
 type Task struct {
-	ID int
+  ID int
 }
 
 func worker(id int, jobs <-chan Task, wg *sync.WaitGroup) {
-	defer wg.Done()
-	for job := range jobs {
-		fmt.Printf("Worker %d processing job %d\\n", id, job.ID)
-	}
+  defer wg.Done()
+  for job := range jobs {
+    fmt.Printf("Worker %d processing job %d\\n", id, job.ID)
+  }
 }
 \`\`\`
     `,
@@ -139,9 +139,9 @@ func worker(id int, jobs <-chan Task, wg *sync.WaitGroup) {
     tags: ["Go", "Microservices", "Concurrency", "ClickHouse"],
     coverImage: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80",
     author: {
-      name: "Alex Rivera",
-      avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80",
-      role: "Senior Full Stack Engineer"
+      name: "Bilqis Nabila Ummami",
+      avatar: "https://ik.imagekit.io/denun/pp_porto.png?updatedAt=1784974983475",
+      role: "Data Analyst & Web Developer"
     }
   }
 ];

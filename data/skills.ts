@@ -18,25 +18,22 @@ export interface Skill {
 }
 
 export const skillsData: Skill[] = [
-  // Backend & Web Development (Fokus Utama: PHP, Laravel, MVC)
-  { name: "PHP & Laravel Framework", category: "Backend", level: 95, experience: "2 yrs", iconName: "Server", featured: true },
-  { name: "MVC Architecture", category: "Backend", level: 92, experience: "2 yrs", iconName: "Layers", featured: true },
-  { name: "JavaScript / TypeScript", category: "Languages", level: 88, experience: "2 yrs", iconName: "Code2", featured: true },
-  { name: "HTML5 & Tailwind CSS", category: "Frontend", level: 92, experience: "2 yrs", iconName: "Palette", featured: true },
+  // Data Analytics & BI (Spesialisasi Utama)
+  { name: "Data Analysis (SQL, Power BI, Excel)", category: "AI", level: 95, experience: "2 yrs", iconName: "BrainCircuit", featured: true },
+  { name: "Tableau & Visualisasi Data", category: "AI", level: 90, experience: "1 yr", iconName: "Palette", featured: true },
+  { name: "Data Science & Microsoft Fabric", category: "AI", level: 88, experience: "1 yr", iconName: "Bot", featured: true },
 
-  // Database & Digital Archiving
-  { name: "MySQL & Relational Databases", category: "Database", level: 94, experience: "3 yrs", iconName: "Database", featured: true },
-  { name: "Zahir Accounting (Financial Data)", category: "Database", level: 88, experience: "1 yr", iconName: "HardDrive", featured: false },
-  { name: "Digital Archiving & E-Gov Systems", category: "Backend", level: 90, experience: "1 yr", iconName: "FileTerminal", featured: true },
+  // Web Development & Frontend
+  { name: "PHP & Laravel Framework", category: "Backend", level: 92, experience: "2 yrs", iconName: "Server", featured: true },
+  { name: "HTML5, CSS & Tailwind CSS", category: "Frontend", level: 94, experience: "2 yrs", iconName: "Code2", featured: true },
+  { name: "Database Design & MySQL", category: "Database", level: 92, experience: "3 yrs", iconName: "Database", featured: true },
 
-  // Data Analytics & BI
-  { name: "Data Visualization", category: "AI", level: 90, experience: "1 yr", iconName: "Palette", featured: true },
-  { name: "Python (Data Science & ML)", category: "AI", level: 86, experience: "1 yr", iconName: "BrainCircuit", featured: true },
-  { name: "Microsoft Fabric & Data Science", category: "AI", level: 85, experience: "1 yr", iconName: "Bot", featured: false },
+  // Cloud & AI
+  { name: "AWS Cloud & Gen AI Fundamentals", category: "Cloud", level: 86, experience: "1 yr", iconName: "Server", featured: true },
+  { name: "Python Programming", category: "Languages", level: 88, experience: "1 yr", iconName: "Terminal", featured: true },
+  { name: "Microsoft Azure Gen AI", category: "Cloud", level: 85, experience: "1 yr", iconName: "Zap", featured: false },
 
-  // Cloud, Tools & DevOps
-  { name: "Laragon (Local Development)", category: "Tools", level: 95, experience: "2 yrs", iconName: "Terminal", featured: false },
-  { name: "AWS Cloud Practitioner", category: "Cloud", level: 85, experience: "1 yr", iconName: "Server", featured: true },
-  { name: "Microsoft Azure (Gen AI Fundamentals)", category: "Cloud", level: 85, experience: "1 yr", iconName: "Zap", featured: false },
-  { name: "Git & GitHub Version Control", category: "Tools", level: 92, experience: "3 yrs", iconName: "GitBranch", featured: true }
+  // Tools & Version Control
+  { name: "Git & GitHub Version Control", category: "Tools", level: 90, experience: "2 yrs", iconName: "GitBranch", featured: true },
+  { name: "Spec-Driven Development (Kiro)", category: "Tools", level: 85, experience: "1 yr", iconName: "Layers", featured: false }
 ];

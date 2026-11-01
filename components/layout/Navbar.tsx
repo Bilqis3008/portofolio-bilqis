@@ -51,7 +51,7 @@ export function Navbar() {
             <Terminal className="w-4 h-4" />
           </div>
           <span className="tracking-tight group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-            Zuhri
+            Bilqis
             <span className="text-blue-500 font-extrabold">.dev</span>
           </span>
         </Link>

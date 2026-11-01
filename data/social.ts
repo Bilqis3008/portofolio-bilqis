@@ -9,37 +9,37 @@ export interface SocialLink {
 export const socialLinks: SocialLink[] = [
   {
     name: "GitHub",
-    url: "https://github.com/muhzuhri",
+    url: "https://github.com/Bilqis3008",
     icon: "Github",
-    handle: "@muhzuhri",
+    handle: "@Bilqis3008",
     color: "#2DBA4E"
   },
   {
     name: "LinkedIn",
-    url: "https://www.linkedin.com/in/muh-zuhri-mubarak-0921972a5/",
+    url: "https://www.linkedin.com/in/bilqis-nabila-ummami-23a02b289/",
     icon: "Linkedin",
-    handle: "in/muh-zuhri-mubarak-0921972a5/",
+    handle: "in/bilqis-nabila-ummami-23a02b289/",
     color: "#0A66C2"
   },
   {
     name: "Instagram",
-    url: "https://www.instagram.com/muhzhrii",
+    url: "https://www.instagram.com/bilqisnblaa/",
     icon: "Instagram",
-    handle: "@muhzuhrii",
+    handle: "@bilqisnblaa",
     color: "#E4405F"
   },
   {
     name: "WhatsApp",
-    url: "https://wa.me/082160107638",
+    url: "https://wa.me/085266501830",
     icon: "MessageCircle",
-    handle: "+62 82160107638",
+    handle: "+62 85266501830",
     color: "#25D366"
   },
   {
     name: "Email",
-    url: "mailto:muhzhrii@gmail.com",
+    url: "mailto:bilaboknamanya@gmail.com",
     icon: "Mail",
-    handle: "muhzhrii@gmail.com",
+    handle: "bilaboknamanya@gmail.com",
     color: "#EA4335"
   }
 ];

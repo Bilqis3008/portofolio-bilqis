@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { Certificate } from "@/data/certificates";
-import { Award, ExternalLink, Calendar, CheckCircle, Eye, X } from "lucide-react";
+import { Award, ExternalLink, CheckCircle, X, ImageIcon } from "lucide-react";
 
 interface CertificateCardProps {
   certificate: Certificate;
@@ -11,6 +11,7 @@ interface CertificateCardProps {
 
 export function CertificateCard({ certificate }: CertificateCardProps) {
   const [modalOpen, setModalOpen] = useState(false);
+  const hasRealUrl = certificate.credentialUrl && certificate.credentialUrl !== "#";
 
   return (
     <>
@@ -53,69 +54,77 @@ export function CertificateCard({ certificate }: CertificateCardProps) {
           </div>
 
           <div className="pt-4 border-t border-zinc-200/60 dark:border-zinc-800/60 flex items-center justify-between gap-2 text-xs">
-
-            <a
-              href={certificate.credentialUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-1 font-semibold text-blue-500 hover:text-blue-400 transition-colors"
-            >
-              <span>Lihat Sertifikat</span>
-              <ExternalLink className="w-3.5 h-3.5" />
-            </a>
-          </div>
-        </div>
-      </div>
-
-      {/* Modal Preview */}
-      {modalOpen && (
-        <div className="fixed inset-0 z-50 bg-black/70 backdrop-blur-md flex items-center justify-center p-4">
-          <div className="relative w-full max-w-xl bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden shadow-2xl p-6 text-zinc-100 space-y-4 animate-in fade-in-0 zoom-in-95">
-            <button
-              onClick={() => setModalOpen(false)}
-              className="absolute top-4 right-4 p-2 rounded-full bg-zinc-800 text-zinc-400 hover:text-white"
-            >
-              <X className="w-4 h-4" />
-            </button>
-
-            <div className="relative w-full h-56 rounded-xl overflow-hidden bg-zinc-950 border border-zinc-800">
-              <Image
-                src={certificate.image}
-                alt={certificate.title}
-                fill
-                className="object-cover"
-              />
-            </div>
-
-            <div>
-              <span className="text-xs font-semibold text-blue-400 uppercase tracking-wider">
-                {certificate.issuer}
-              </span>
-              <h3 className="text-xl font-bold text-white mt-1">
-                {certificate.title}
-              </h3>
-              {certificate.credentialId && certificate.credentialId !== "-" && (
-                <p className="text-xs text-zinc-400 font-mono mt-1">
-                  Credential ID: {certificate.credentialId}
-                </p>
-              )}
-            </div>
-
-            <div className="flex items-center justify-between pt-4 border-t border-zinc-800">
-              <span className="text-xs text-zinc-400 flex items-center gap-1">
-                <CheckCircle className="w-4 h-4 text-emerald-400" />
-                Kredensial Terverifikasi Resmi
-              </span>
-
+            {hasRealUrl ? (
               <a
                 href={certificate.credentialUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold flex items-center gap-2"
+                className="flex items-center gap-1 font-semibold text-blue-500 hover:text-blue-400 transition-colors"
               >
-                <span>Verifikasi Online</span>
+                <span>Lihat Sertifikat</span>
                 <ExternalLink className="w-3.5 h-3.5" />
               </a>
+            ) : (
+              <button
+                onClick={() => setModalOpen(true)}
+                className="flex items-center gap-1 font-semibold text-blue-500 hover:text-blue-400 transition-colors"
+              >
+                <span>Lihat Sertifikat</span>
+                <ImageIcon className="w-3.5 h-3.5" />
+              </button>
+            )}
+          </div>
+        </div>
+      </div>
+
+      {/* Modal Preview - hanya tampil untuk sertifikat tanpa URL */}
+      {modalOpen && (
+        <div
+          className="fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-center p-4"
+          onClick={() => setModalOpen(false)}
+        >
+          <div
+            className="relative w-full max-w-2xl bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden shadow-2xl text-zinc-100 animate-in fade-in-0 zoom-in-95"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Tombol tutup */}
+            <button
+              onClick={() => setModalOpen(false)}
+              className="absolute top-4 right-4 z-10 p-2 rounded-full bg-zinc-800/90 text-zinc-400 hover:text-white hover:bg-zinc-700 transition-colors"
+            >
+              <X className="w-4 h-4" />
+            </button>
+
+            {/* Gambar sertifikat besar */}
+            <div className="relative w-full h-72 sm:h-96 bg-zinc-950">
+              <Image
+                src={certificate.image}
+                alt={certificate.title}
+                fill
+                className="object-contain"
+              />
+            </div>
+
+            {/* Info */}
+            <div className="p-6 space-y-3">
+              <div>
+                <span className="text-xs font-semibold text-blue-400 uppercase tracking-wider">
+                  {certificate.issuer}
+                </span>
+                <h3 className="text-lg font-bold text-white mt-1">
+                  {certificate.title}
+                </h3>
+                {certificate.credentialId && certificate.credentialId !== "-" && (
+                  <p className="text-xs text-zinc-400 font-mono mt-1">
+                    Credential ID: {certificate.credentialId}
+                  </p>
+                )}
+              </div>
+
+              <div className="flex items-center gap-2 pt-3 border-t border-zinc-800">
+                <CheckCircle className="w-4 h-4 text-emerald-400 shrink-0" />
+                <span className="text-xs text-zinc-400">Sertifikat Resmi Terverifikasi</span>
+              </div>
             </div>
           </div>
         </div>
