@@ -114,9 +114,7 @@ export const projectsData: Project[] = [
     featured: true,
     image: "/project/ppat.png",
     gallery: [
-      "/project/ppat.png",
-      "/project/ppat.jpg",
-      "/project/ppat.jpg"
+      "/project/ppat.png"
     ],
     githubUrl: "https://github.com/Bilqis30/PPAT",
     metrics: [
